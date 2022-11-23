@@ -27,19 +27,22 @@ Haverá três estruturas principais para simular o gerenciamento de memória: um
 * Mapeamento das páginas em memória virtual nos frames da memória principal por meio da tabela de páginas
 * Substituição de frames na memória principal por meio do algoritmo FIFO (first in - first out)
 * Visualização das mudanças realizadas nas memórias da seguinte forma:
-  * Memória Virtual: "(x|y)", sendo x o número da página na memória virtual e y a identificação da página do processo
-  * Tabela de Páginaas: "(x|y|z)", sendo x a página da memória virtual, y o frame na memória principal e z o bit de validade (0 = não se encontra na memória principal, 1 = se encontra)
-  * "RR:" para quando um produto de qualdiade "Ruim" for removido  
-
-![Imagem da execução do código](Memorias_execucao.jpg )                                                                                                          
-<sub>Exemplo da visualização das mudanças na memória.</sub>
+  * Memória Virtual: "x|y", sendo x o número da página na memória virtual e y a identificação da página do processo
+  ![Imagem da execução do código](memoria_virtual.jpg )
+  
+  * Memória Principal: "(x|y), sendo x o frame na memória principal e y a identificação da página do processo
+  ![Imagem da execução do código](memoria_principal.jpg ) 
+ 
+  * Tabela de Páginas: "x|y|z", sendo x a página da memória virtual, y o frame na memória principal e z o bit de validade (0 = não se encontra na memória principal, 1 = se encontra)
+  ![Imagem da execução do código](tabela_paginas.jpg )   
 
 * Visualização da estatística final do simulador, incluindo:
-  * Lista de produtos produzidos de cada tipo
-  * Quantidade total de produtos produzidos de cada tipo
-  * Média de tempo de inserção e remoção de cada tipo de produto
+  * Total de solicitações respondidas
+  * Quantidade de solicitações encontradas na memoria principal
+  * Quantidade de solicitações adicionadas na memoria principal sem substituição
+  * Quantidade de solicitações adicionadas na memoria principal através de substituição
 
-![Imagem da impressão da estatística final durante a execução do código](Esteira_resumo.jpg )                                                                  
+![Imagem da impressão da estatística final durante a execução do código](estatistica.jpg )                                                                  
 <sub>Exemplo da visualização da estatística final.</sub>  
  
 ## Autora
