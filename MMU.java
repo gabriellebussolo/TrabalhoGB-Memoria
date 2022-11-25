@@ -81,7 +81,7 @@ public class MMU {
 			else {
 				System.out.println("Verificando tabela de paginas...");
 
-				Thread.sleep(2000);
+				Thread.sleep(1500);
 
 				// Verifica qual o bit de validade dessa pagina na tabela de paginas
 				frameMP = verificaBitValidade(pagMV);
@@ -97,15 +97,15 @@ public class MMU {
 				// Bit de validade = 0 (pagina nao se encontra na memoria principal)
 				} else {
 					System.out.println("Ocorreu uma Falta de Página!");
-					Thread.sleep(2000);
+					Thread.sleep(1500);
 					System.out.println("Tentando adicionar pagina faltante na memoria principal...");
-					Thread.sleep(2000);
+					Thread.sleep(1500);
 					
 					// Memoria virtual cheia: chama algoritmo de substituicao
 					if (mp.isFull()) {
 						System.out.println("Memoria Principal cheia - processo de substituicao ativado...");
 
-						Thread.sleep(2000);
+						Thread.sleep(1500);
 
 						int frameSubstituido = mp.substituicao(solicitacao);
 						this.atualizaFrameSubstituido(frameSubstituido);
