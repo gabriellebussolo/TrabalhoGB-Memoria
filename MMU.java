@@ -123,13 +123,13 @@ public class MMU {
 				}
 
 				System.out.println("\n======================== Estado atual ==========================");
-				Thread.sleep(1500);
+				Thread.sleep(1000);
 				System.out.println(mv);
-				Thread.sleep(1500);
+				Thread.sleep(1000);
 				System.out.println(this.toString());
-				Thread.sleep(1500);
+				Thread.sleep(1000);
 				System.out.println(mp);
-				Thread.sleep(1500);
+				Thread.sleep(1000);
 				System.out.println("==================================================================");
 			}
 		} catch (InterruptedException e) {
