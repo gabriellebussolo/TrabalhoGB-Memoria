@@ -24,7 +24,6 @@ public class Principal {
 
 		try {
 			System.out.printf("Criando processo de %d KB (%d paginas de 8KB) e adicionando-o na memoria virtual...\n", tamanho, quantPag);
-			Thread.sleep(1500);
 			Thread p = new Thread(new solicitaPagina(tabela, 1, quantPag, quantSolicitacao));
 			
 			// Adiciona as paginas do processo na memoria virtual
@@ -33,7 +32,7 @@ public class Principal {
 			System.out.println(mv);
 			
 			System.out.println("\nIniciando simulação...");
-			Thread.sleep(1500);
+			Thread.sleep(1000);
 			p.start();
 			
 			p.join();
