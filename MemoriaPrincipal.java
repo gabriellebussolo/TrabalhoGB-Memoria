@@ -1,7 +1,7 @@
 
 public class MemoriaPrincipal extends Memoria {
 	
-	int topo;
+	private int topo;
 	
 	public MemoriaPrincipal(int tam) {
 		super(tam);
