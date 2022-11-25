@@ -101,7 +101,7 @@ public class MMU {
 					System.out.println("Tentando adicionar pagina faltante na memoria principal...");
 					Thread.sleep(1500);
 					
-					// Memoria virtual cheia: chama algoritmo de substituicao
+					// Memoria principal cheia: chama algoritmo de substituicao
 					if (mp.isFull()) {
 						System.out.println("Memoria Principal cheia - processo de substituicao ativado...");
 
@@ -114,7 +114,7 @@ public class MMU {
 
 						this.historico[2]++;
 						
-					// Memoria virtual possui espaço: adiciona pagina a um frame na memoria principal
+					// Memoria principal possui espaço: adiciona pagina a um frame na memoria principal
 					} else {
 						frameMP = mp.add(solicitacao);
 						this.atualizaNovoFrame(pagMV, frameMP);
